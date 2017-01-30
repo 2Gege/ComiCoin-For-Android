@@ -38,11 +38,20 @@
     * transpond_id 转发原PO的分享ID
     * transpond_data 转发原PO的分享数据（格式同show方法）
 
+### user_timeline
+#### 作用
+获取用户发布的分享信息列表
+#### 参数说明
+* int user_id 用户ID
+* int [page] 页码
+
+#### 返回（同friends_timeline方法）
+
 ### show
 #### 作用
 获取某条分享的详细内容
 #### 参数说明
-* int [id] 分享ID
+* int id 分享ID
 
 #### 返回
 * feed_id 分享ID 
@@ -75,24 +84,39 @@
 * transpond_id 转发原PO的分享ID
 * transpond_data 转发原PO的分享数据（格式同show方法）
 
-## 为某条分享添加赞
-### 路径
-index.php?app=api&mod=WeiboStatuses&act=add_digg
+### add_digg
+#### 作用
+为某条分享添加赞
+#### 参数说明
+* int feed_id 分享ID
 
-### 参数说明
-* feed_id 分享ID（必填）
-
-### 返回
+#### 返回
 * true
 * false
 
-## 为某条分享取消赞
-### 路径
-index.php?app=api&mod=WeiboStatuses&act=del_digg
+### del_digg
+#### 作用
+为某条分享取消赞
+#### 参数说明
+* int feed_id 分享ID
 
-### 参数说明
-* feed_id 分享ID（必填）
-
-### 返回
+#### 返回
 * true
 * false
+
+### destroy
+#### 作用
+删除指定分享
+#### 参数说明
+* int id 分享ID
+
+#### 返回
+* status （1:true;0:false;）
+
+### reposts
+#### 作用
+获取指定分享的转发列表
+#### 参数说明
+* int id 分享ID
+
+#### 返回（同friends_timeline方法）
