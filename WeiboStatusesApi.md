@@ -156,4 +156,26 @@
    * avatar_big 点赞者头像（200x200）
    * avatar_middle 点赞者头像（100x100）
    * avatar_small 点赞者头像（50x50）
-   
+
+### diggs_to_me
+#### 作用
+获取我收到的赞
+#### 参数说明
+#### 返回(同diggs方法)
+ 
+### comments_to_me_true
+#### 作用
+获取当前用户收到的评论,除去自己的评论
+#### 参数说明
+* int [page] 页码
+
+#### 返回（同comments方法）
+
+### comments_by_me
+#### 作用
+获取当前用户发出的评论
+#### 参数说明
+* int [page] 页码
+
+#### 返回（同comments方法）
+
