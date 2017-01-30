@@ -120,3 +120,40 @@
 * int id 分享ID
 
 #### 返回（同friends_timeline方法）
+
+### comments
+#### 作用
+获取指定分享的评论列表
+#### 参数说明
+* int id 分享ID
+
+#### 返回
+* []
+   * comment_id 评论ID
+   * content 评论内容
+   * showtime 创建时间
+   * uid 评论者ID
+   * uname 评论者昵称
+   * avatar_big 评论者头像（200x200）
+   * avatar_middle 评论者头像（100x100）
+   * avatar_small 评论者头像（50x50）
+   * to_uid 被评论的评论者ID（楼中楼的情况）
+   * to_comment_id 被评论的评论ID（楼中楼的情况）
+
+### diggs
+#### 作用
+获取指定分享的赞过的人的列表
+#### 参数说明
+* int id 分享ID
+
+#### 返回
+* count 收到的赞总数
+* data []
+   * cTime 点赞时间戳
+   * feed_id 被赞的分享ID
+   * uid 点赞用户ID
+   * uname 点赞用户昵称
+   * avatar_big 点赞者头像（200x200）
+   * avatar_middle 点赞者头像（100x100）
+   * avatar_small 点赞者头像（50x50）
+   
