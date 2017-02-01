@@ -216,6 +216,7 @@
 * varchar content 评论内容
 * int [to_comment_id] 被评论的评论ID
 * int [to_uid] 被评论的评论者ID
+
 #### 返回
 * status 状态（1:true;0:false;）
 * info 提示
