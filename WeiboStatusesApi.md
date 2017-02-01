@@ -179,3 +179,43 @@
 
 #### 返回（同comments方法）
 
+### mentions_feed
+#### 作用
+提到我的feed
+#### 参数说明
+* int [page] 页码
+
+#### 返回（同friends_timeline方法）
+
+### favorite_feed
+#### 作用
+收藏的feed列表
+#### 参数说明
+* int [page] 页码
+
+#### 返回（同friends_timeline方法）
+
+### update
+#### 作用
+发布一条分享
+#### 参数说明
+* varchar content 分享内容
+* varchar type 分享类型（post:文本;postimage:图片;postaudio:音频;postvideo:视频;）
+
+#### 返回
+* status 状态（1:true;0:false;）
+* info 提示
+* feed_id 分享ID
+
+### comment
+#### 作用
+发表评论
+#### 参数说明
+* int row_id 分享ID
+* int app_uid 分享者ID
+* varchar content 评论内容
+* int [to_comment_id] 被评论的评论ID
+* int [to_uid] 被评论的评论者ID
+#### 返回
+* status 状态（1:true;0:false;）
+* info 提示
